@@ -14,7 +14,7 @@ class SearchBar extends Component {
     super(props);
 
     // init state
-    this.state = { searchTerm: '' };
+    this.state = { searchTerm: 'Search' };
     // Object contains properties we want to record on the state
   }
 
@@ -23,14 +23,17 @@ class SearchBar extends Component {
     return (
       <div className="search-bar">
         {/* Controlled component */}
-        <form onSubmit={e => e.preventDefault()}>
-            <label htmlFor="input-bar">Search</label> <br />
-            <input id="input-bar"
-              value = {this.state.searchTerm}
+        <form onSubmit={e => {
+                console.log("Start search");
+                e.preventDefault
+            }}>
+            <input
+              className="form-control"
+              placeholder={this.state.searchTerm}
               onChange={e => this.setState({searchTerm: e.target.value})}
               onFocus={e => e.target.setSelectionRange(0, e.target.value.length)}
               />
-          <input type="submit" value="Submit" />
+          <input type="submit" className="btn btn-default" value="Submit" />
          </form>
       </div>
     )
