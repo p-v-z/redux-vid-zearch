@@ -16,12 +16,14 @@ const VideoList = (props) => {
        )
     });
 
-    return <div>
-        {/*className gets used to not get confused between react class and css class. bootstrap*/}
-        <ul className="col-md-4 list-group">
-            {videoItems}
-        </ul>
-    </div>
+    return (
+		<div>
+	        {/*className gets used to not get confused between react class and css class. bootstrap*/}
+	        <ul className="col-md-4 list-group">
+	            {videoItems}
+	        </ul>
+	    </div>
+	)
 }
 
 export default VideoList;

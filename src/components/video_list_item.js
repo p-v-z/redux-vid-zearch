@@ -11,7 +11,7 @@ const VideoListItem = ({video, onVideoSelect}) => { // ES6 - grab this property 
     // }
 
     // console.log(video);
-    return (
+    return(
         <li
             onClick={() => onVideoSelect(video)} className="list-group-item">
             <div className="video-list media">
@@ -24,7 +24,7 @@ const VideoListItem = ({video, onVideoSelect}) => { // ES6 - grab this property 
                 </div>
             </div>
         </li>
-    );
+	)
 }
 
 export default VideoListItem;
